@@ -1,0 +1,93 @@
+PUT http://localhost:8000/users/1
+Content-Type: application/json
+Content-Length: 59
+User-Agent: IntelliJ HTTP Client/PyCharm 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "full_name": "Иван Иванович Иванов"
+}
+
+<> 2026-04-07T015455.200.json
+
+###
+
+GET http://localhost:8000/users/1
+User-Agent: IntelliJ HTTP Client/PyCharm 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2026-04-07T015453.200.json
+
+###
+
+GET http://localhost:8000/users/?skip=0&limit=2
+User-Agent: IntelliJ HTTP Client/PyCharm 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2026-04-07T015449.200.json
+
+###
+
+GET http://localhost:8000/users/
+User-Agent: IntelliJ HTTP Client/PyCharm 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2026-04-07T015440.200.json
+
+###
+
+POST http://localhost:8000/users/
+Content-Type: application/json
+Content-Length: 105
+User-Agent: IntelliJ HTTP Client/PyCharm 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "username": "sidorov",
+  "email": "sidorov@example.com",
+  "full_name": "Сидор Сидоров"
+}
+
+<> 2026-04-07T015438.201.json
+
+###
+
+POST http://localhost:8000/users/
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/PyCharm 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "username": "petrov",
+  "email": "petrov@example.com",
+  "full_name": "Пётр Петров"
+}
+
+<> 2026-04-07T015436.201.json
+
+###
+
+POST http://localhost:8000/users/
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/PyCharm 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "username": "ivanov",
+  "email": "ivanov@example.com",
+  "full_name": "Иван Иванов"
+}
+
+<> 2026-04-07T015432.201.json
+
+###
+

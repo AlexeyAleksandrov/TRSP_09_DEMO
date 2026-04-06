@@ -1,0 +1,96 @@
+### Пример 1: CRUD операции с SQLAlchemy
+### Базовый URL
+@baseUrl = http://localhost:8000
+
+### 2. Создать нового пользователя
+POST {{baseUrl}}/users/
+Content-Type: application/json
+
+{
+  "username": "ivanov",
+  "email": "ivanov@example.com",
+  "full_name": "Иван Иванов"
+}
+
+###
+
+### 3. Создать второго пользователя
+POST {{baseUrl}}/users/
+Content-Type: application/json
+
+{
+  "username": "petrov",
+  "email": "petrov@example.com",
+  "full_name": "Пётр Петров"
+}
+
+###
+
+### 4. Создать третьего пользователя
+POST {{baseUrl}}/users/
+Content-Type: application/json
+
+{
+  "username": "sidorov",
+  "email": "sidorov@example.com",
+  "full_name": "Сидор Сидоров"
+}
+
+###
+
+### 5. Получить всех пользователей
+GET {{baseUrl}}/users/
+
+###
+
+### 6. Получить пользователей с пагинацией (skip=0, limit=2)
+GET {{baseUrl}}/users/?skip=0&limit=2
+
+###
+
+### 7. Получить конкретного пользователя по ID (замените 1 на существующий ID)
+GET {{baseUrl}}/users/1
+
+###
+
+### 8. Обновить пользователя
+PUT {{baseUrl}}/users/1
+Content-Type: application/json
+
+{
+  "full_name": "Иван Иванович Иванов"
+}
+
+###
+
+### 9. Обновить email пользователя
+PUT {{baseUrl}}/users/2
+Content-Type: application/json
+
+{
+  "email": "petr.petrov@example.com"
+}
+
+###
+
+### 10. Удалить пользователя
+DELETE {{baseUrl}}/users/3
+
+###
+
+### 11. Попытка получить удалённого пользователя (должна вернуть 404)
+GET {{baseUrl}}/users/3
+
+###
+
+### 12. Попытка создать пользователя с уже существующим email (должна вернуть 400)
+POST {{baseUrl}}/users/
+Content-Type: application/json
+
+{
+  "username": "duplicate",
+  "email": "ivanov@example.com",
+  "full_name": "Дубликат"
+}
+
+###
