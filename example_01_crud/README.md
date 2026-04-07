@@ -1,7 +1,5 @@
 # Пример 1: CRUD операции с FastAPI и SQLAlchemy
 
-## Описание
-Демонстрация базовых CRUD операций (Create, Read, Update, Delete) с использованием FastAPI и SQLAlchemy.
 
 ## Структура проекта
 ```
