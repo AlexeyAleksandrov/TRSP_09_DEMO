@@ -44,7 +44,7 @@ GET {{baseUrl}}/users/
 ###
 
 ### 6. Получить пользователей с пагинацией (skip=0, limit=2)
-GET {{baseUrl}}/users/?skip=0&limit=2
+GET {{baseUrl}}/users/?skip=1&limit=2
 
 ###
 
